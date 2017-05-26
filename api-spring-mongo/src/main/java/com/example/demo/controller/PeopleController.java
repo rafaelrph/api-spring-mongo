@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.dao.PeopleRepository;
 import com.example.demo.model.People;
 
+
 /**
  * Controller of People for controlling the API requests
  * 
@@ -91,6 +92,25 @@ public class PeopleController {
 	@RequestMapping(value = "{id}", method = RequestMethod.DELETE)
 	public void delete(@PathVariable("id") String id){
 		peopleRepository.delete(id);
+	}
+	
+	/**
+	 * Method for insert multiple 
+	 * @param quantity
+	 * @return people found by id
+	 */
+	@RequestMapping(value = "{quantity}", method = RequestMethod.POST)
+	public ResponseEntity<Object> insertMultiple(@PathVariable("quantity") Integer quantity) {
+		long start = System.currentTimeMillis();
+		for(int i = 1; i < quantity; i++) {
+			People people = new People("People " + i, "mail" + i + "@mail.com");
+			peopleRepository.save(people);
+		}
+		
+		long elapsed = System.currentTimeMillis() - start;
+		
+		return new ResponseEntity<Object>("DONE! Inserted " + quantity + " - In " + elapsed + " milliseconds", HttpStatus.OK);
+		
 	}
 	
 }
