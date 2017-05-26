@@ -1,5 +1,5 @@
 # api-spring-mongo
-API's project using Spring Boot + Spring Data + MongoDB
+Simple Persistence Sample API using Spring Boot + Spring Data + MongoDB
 
 
 # Requirements
