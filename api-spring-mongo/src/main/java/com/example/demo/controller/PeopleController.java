@@ -34,7 +34,7 @@ public class PeopleController {
 	PeopleRepository peopleRepository;
 	
 	/**
-	 * Method for list all the objects
+	 * List all the objects
 	 * @return people's list
 	 */
 	@RequestMapping(method = RequestMethod.GET)
@@ -43,7 +43,7 @@ public class PeopleController {
 	}
 
 	/**
-	 * Method for create/save new object
+	 * Create/save new object
 	 * @param people
 	 * @return people created
 	 */
@@ -53,7 +53,7 @@ public class PeopleController {
 	}
 	
 	/**
-	 * Method for find an object by id
+	 * Find an object by id
 	 * @param id
 	 * @return people found by id
 	 */
@@ -68,7 +68,7 @@ public class PeopleController {
 	}
 	
 	/**
-	 * Method for update an object
+	 * Update an object
 	 * @param people
 	 * @param id
 	 * @return people updated
@@ -86,7 +86,7 @@ public class PeopleController {
 	}
 	
 	/**
-	 * Method for delete an object
+	 * Delete an object
 	 * @param id
 	 */
 	@RequestMapping(value = "{id}", method = RequestMethod.DELETE)
@@ -95,7 +95,7 @@ public class PeopleController {
 	}
 	
 	/**
-	 * Method for insert multiple 
+	 * Insert multiple 
 	 * @param quantity
 	 * @return people found by id
 	 */

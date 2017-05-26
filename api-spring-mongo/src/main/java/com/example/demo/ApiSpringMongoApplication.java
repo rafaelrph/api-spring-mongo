@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ApiSpringMongoApplication {
 
 	/**
-	 * Main method for run the application
+	 * Main method
 	 * 
 	 * @param args
 	 */
